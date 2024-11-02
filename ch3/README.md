@@ -176,3 +176,62 @@ let a = [1,4,5,6011,4];
 let first = a[0];
 let second = a[1];
 ```
+
+# 3.3 Functions
+- Rust code uses snake case as the conventional style for function and variable names, in which all letters are lowercase and underscores separate words.
+- Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
+
+## Statements and Expressions
+- **Statements** are instructions that perform some action and do not return a value.
+- **Expressions** evaluate to a resultant value. Let’s look at some examples.
+
+Statements:
+- Creating a variable and assigning a value to it with the let keyword is a statement. In Listing 3-1, let y = 6; is a statement.
+```
+fn main() {
+  let y = 6; // Statement
+}
+```
+
+- Statements do not return values. Therefore, you can’t assign a let statement to another variable
+```
+fn main() {
+    let x = (let y = 6); // Error
+}
+```
+
+Expressions:
+- Calling a function is an expression.
+- Calling a macro is an expression. 
+- A new scope block created with curly brackets is an expression
+```
+fn main() {
+    let y = {   // Expression
+        let x = 3;
+        x + 1   // NOTE : No semicolon is used here, becuase expressions don't end in semi colon
+    };
+
+    println!("The value of y is: {y}");
+}
+```
+- **Expressions do not include ending semicolons**
+
+## Functions with Return Values
+- We must declare their type after an arrow (->)
+```
+fn five() -> i32 {
+    5
+}
+```
+
+```
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+```

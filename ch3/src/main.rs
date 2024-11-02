@@ -25,4 +25,12 @@ fn main() {
     for i in 0..arr.len(){
         println!("{}",arr[i]);
     }
+
+    print_array(arr);
+}
+
+fn print_array(arr : [&str;3]) {
+    for num in arr{
+        println!("{}",num)
+    }
 }
