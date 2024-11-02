@@ -16,4 +16,4 @@ Well, its _fast_, _difficult_, and highly _reputed_ language.
 - Installtion : 31/10/2024
 - 1. Getting Started : 31/10/24
 - 2. Programming a Guessing game : 31/10/2024
-- 3. Common Programming Concepts : 01/11/2024
+- 3. Common Programming Concepts : 01/11/2024 - 2/11/2024
