@@ -1,4 +1,4 @@
-# Motivation from "The Book" -
+# Motivation from "The Book"
 > Compiler errors can be frustrating, but really they only mean your program isn’t safely doing what you want it to do yet; they do not mean that you’re not a good programmer!
 
 # 3.1 Variables and Immutability
@@ -103,3 +103,76 @@ How to handle overflow?
 - Return the `None` value if there is overflow with the `checked_*` methods.
 - Return the value and a boolean indicating whether there was overflow with the `overflowing_*` methods.
 - Saturate at the value’s minimum or maximum values with the `saturating_*` methods.
+
+### Floating point
+- Rust supports `f32` and `f64` for floating points
+- The default type is `f64`
+
+```
+fn main() {
+    let x = 2.0; // f64
+
+    let y: f32 = 3.0; // f32
+}
+```
+
+### Booleans
+- Booleans are one byte in size
+
+### Character 
+- Char literals are written in `single qutoes` unlike strings
+- Rust’s char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. Accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces are all valid char values in Rust.
+
+```
+fn main() {
+    let c = 'z';
+    let z: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
+}
+```
+
+## Compound Types
+- Compound types can group multiple values into one type.
+- Rust has two primitive compound types: tuples and arrays.
+
+### Tuples
+A tuple is a general way of grouping together a number of values with a variety of types into one compound type.
+
+- Tuples have a fixed length
+- Types of the different values in the tuple don’t have to be the same
+```
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+- The tuple without any values has a special name, **unit**. This value and its corresponding type are both written () and represent an empty value or an empty return type.
+- Expressions implicitly return the unit value if they don’t return any other value.
+
+### Arrays
+- Every element of an array must have the same type.
+- Arrays have fixed size
+- Values are written in square brackets `[]`
+```
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+}
+```
+- Arrays are useful when you want your data allocated on the stack rather than the heap 
+- You write an array’s type using square brackets with the type of each element, a semicolon, and then the number of elements in the array, like so:
+```
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
+here, `i32` is the type of each element, and `5` is the size of the array.
+
+- You can also initialize an array to contain the same value for each element by specifying the initial value, followed by a semicolon, and then the length of the array in square brackets, as shown here
+```
+let a = [3; 5];
+```
+that creates the array a = [3,3,3,3,3];
+
+#### Accessing Array elements
+```
+let a = [1,4,5,6011,4];
+let first = a[0];
+let second = a[1];
+```
