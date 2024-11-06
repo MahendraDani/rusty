@@ -17,3 +17,4 @@ Well, its _fast_, _difficult_, and highly _reputed_ language.
 - 1. Getting Started : 31/10/24
 - 2. Programming a Guessing game : 31/10/2024
 - 3. Common Programming Concepts : 01/11/2024 - 2/11/2024
+- 4. Understanding Ownership : 6/11/2024
