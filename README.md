@@ -10,7 +10,7 @@ Well, its _fast_, _difficult_, and highly _reputed_ language.
 - Rust can be used for literally everything, CLI, Web apps, embedded systems.
 - Adds one more language to my arsenal, giving me opportunities to contribute to Rust based projects like [Graphite](graphite.rs)
 - I want to build CLI's in rust,especially the ones in [Jhon Cricket's Coding Challenges](https://codingchallenges.fyi/challenges/intro)
-- My goal is to get into GSOC'24 and SOB'24 and having Rust knowledge gives me more opportunites, given that I have enough time (4 months Nov'24-Fev-25) to learn Rust.
+- My goal is to get into GSOC'25 and SOB'25 and having Rust knowledge gives me more opportunites, given that I have enough time (4 months Nov'24-Fev-25) to learn Rust.
 
 # Journey
 - Installtion : 31/10/2024

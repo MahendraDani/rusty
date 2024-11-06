@@ -4,7 +4,7 @@
 # 3.1 Variables and Immutability
 ## 1. Immutability
 By default, variables are **immutable** in Rust. Variables can be made mutable using `mut` keyword
-```
+```Rust
 let x = 7; // immutable
 x = 10; // NOT ALLOWED
 ```
@@ -24,7 +24,7 @@ If one part of our code operates on the assumption that a value will never chang
 ## 2. Constants
 Constants are values that are bound to a name and are not allowed to change.
 
-```
+```Rust
 const x:i32 = 13; // Always immutable
 ```
 
@@ -39,7 +39,7 @@ const x:i32 = 13; // Always immutable
 - A variable can be declared again with the same name and different type in Rust, this is called _shadowing_ 
 - In effect, the second variable overshadows the first, taking any uses of the variable name to itself until either it itself is shadowed or the scope ends.
 
-```
+```Rust
 fn main() {
     let x = 5;
 
@@ -56,14 +56,14 @@ fn main() {
 ```
 - By using let, we can perform a few transformations on a value but have the variable be immutable after those transformations have been completed.
 
-```
+```Rust
 let spaces = "   ";
 let spaces = spaces.len();
 
 ```
 
 - A variable's type can't be changed using `mut` keyword
-```
+```Rust
 let mut spaces = "   ";
 spaces = spaces.len(); // ERROR (E0308)
 ```
@@ -108,7 +108,7 @@ How to handle overflow?
 - Rust supports `f32` and `f64` for floating points
 - The default type is `f64`
 
-```
+```Rust
 fn main() {
     let x = 2.0; // f64
 
@@ -123,7 +123,7 @@ fn main() {
 - Char literals are written in `single qutoes` unlike strings
 - Rust’s char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. Accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces are all valid char values in Rust.
 
-```
+```Rust
 fn main() {
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
@@ -140,7 +140,7 @@ A tuple is a general way of grouping together a number of values with a variety 
 
 - Tuples have a fixed length
 - Types of the different values in the tuple don’t have to be the same
-```
+```Rust
 fn main() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 }
@@ -152,26 +152,26 @@ fn main() {
 - Every element of an array must have the same type.
 - Arrays have fixed size
 - Values are written in square brackets `[]`
-```
+```Rust
 fn main() {
     let a = [1, 2, 3, 4, 5];
 }
 ```
 - Arrays are useful when you want your data allocated on the stack rather than the heap 
 - You write an array’s type using square brackets with the type of each element, a semicolon, and then the number of elements in the array, like so:
-```
+```Rust
 let a: [i32; 5] = [1, 2, 3, 4, 5];
 ```
 here, `i32` is the type of each element, and `5` is the size of the array.
 
 - You can also initialize an array to contain the same value for each element by specifying the initial value, followed by a semicolon, and then the length of the array in square brackets, as shown here
-```
+```Rust
 let a = [3; 5];
 ```
 that creates the array a = [3,3,3,3,3];
 
 #### Accessing Array elements
-```
+```Rust
 let a = [1,4,5,6011,4];
 let first = a[0];
 let second = a[1];
@@ -187,14 +187,14 @@ let second = a[1];
 
 Statements:
 - Creating a variable and assigning a value to it with the let keyword is a statement. In Listing 3-1, let y = 6; is a statement.
-```
+```Rust
 fn main() {
   let y = 6; // Statement
 }
 ```
 
 - Statements do not return values. Therefore, you can’t assign a let statement to another variable
-```
+```Rust
 fn main() {
     let x = (let y = 6); // Error
 }
@@ -204,7 +204,7 @@ Expressions:
 - Calling a function is an expression.
 - Calling a macro is an expression. 
 - A new scope block created with curly brackets is an expression
-```
+```Rust
 fn main() {
     let y = {   // Expression
         let x = 3;
@@ -218,13 +218,13 @@ fn main() {
 
 ## Functions with Return Values
 - We must declare their type after an arrow (->)
-```
+```Rust
 fn five() -> i32 {
     5
 }
 ```
 
-```
+```Rust
 fn main() {
     let x = plus_one(5);
 
@@ -242,7 +242,7 @@ fn plus_one(x: i32) -> i32 {
 - Blocks of code associated with the conditions in if expressions are sometimes called _arms_
 
 ## `If` in a `let` statement
-```
+```Rust
 fn main() {
     let condition = true;
     let number = if condition { 5 } else { 6 };
@@ -257,7 +257,7 @@ fn main() {
 The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
 
 ### Returning values from loops
-```
+```Rust
 fn main() {
     let mut counter = 0;
 
@@ -276,7 +276,7 @@ fn main() {
 ### Loop labels to disambiguate between multiple loops
 If you have loops within loops, break and continue apply to the innermost loop at that point. You can optionally specify a loop label on a loop that you can then use with break or continue to specify that those keywords apply to the labeled loop instead of the innermost loop.
 
-```
+```Rust
 fn main() {
     let mut count = 0;
     'counting_up: loop {
@@ -301,7 +301,7 @@ fn main() {
 ```
 
 ### While loops
-```
+```Rust
 fn main() {
     let mut number = 3;
 
@@ -316,7 +316,7 @@ fn main() {
 ```
 
 ### `for`-`in` loop
-```
+```Rust
 fn main() {
     let a = [10, 20, 30, 40, 50];
 
