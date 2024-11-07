@@ -19,3 +19,4 @@ Well, its _fast_, _difficult_, and highly _reputed_ language.
 - [x] Common Programming Concepts : 01/11/2024 - 2/11/2024
 - [x] Understanding Ownership : 6/11/2024
 - [x] Using Structs to Structure Related data : 07/11/24
+- [ ] Enums and Pattern Matching : 07/11/24
