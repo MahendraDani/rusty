@@ -20,3 +20,5 @@ Well, its _fast_, _difficult_, and highly _reputed_ language.
 - [x] Understanding Ownership : 6/11/2024
 - [x] Using Structs to Structure Related data : 07/11/24
 - [ ] Enums and Pattern Matching : 07/11/24
+- [x] Growing Projects : 18/11/2024
+- [ ] Common Collections : 18/11/2024 - 
